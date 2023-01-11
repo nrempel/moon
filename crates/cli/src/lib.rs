@@ -225,6 +225,26 @@ pub async fn run_cli() {
                 })
                 .await
             }
+            QueryCommands::Tasks {
+                alias,
+                affected,
+                id,
+                language,
+                source,
+                tasks,
+                type_of,
+            } => {
+                query::tasks(&QueryProjectsOptions {
+                    alias: alias.clone(),
+                    affected: *affected,
+                    id: id.clone(),
+                    language: language.clone(),
+                    source: source.clone(),
+                    tasks: tasks.clone(),
+                    type_of: type_of.clone(),
+                })
+                .await
+            }
         },
         Commands::Run {
             targets,
