@@ -328,6 +328,8 @@ impl<'a> Runner<'a> {
             }
         }
 
+        dbg!(&command);
+
         Ok(command)
     }
 
