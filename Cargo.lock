@@ -2327,6 +2327,7 @@ dependencies = [
  "moon_tool",
  "moon_utils",
  "proto",
+ "rustc-hash",
  "serde",
  "serde_json",
 ]
