@@ -1,5 +1,36 @@
 # Changelog
 
+## Unreleased
+
+#### 🚀 Updates
+
+- Added [TypeScript v5](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0-beta/)
+  support.
+
+#### ⚙️ Internal
+
+- Added initial Go lang support to our toolchain.
+
+## 0.23.3
+
+#### 🐞 Fixes
+
+- Fixed an issue where `git ls-files --deduplicate` wasn't available on older git versions.
+
+#### ⚙️ Internal
+
+- Minor internal changes for upcoming remote caching changes.
+
+## 0.23.2
+
+#### 🐞 Fixes
+
+- Fixed a recursion issue when attempting to install dependencies and a post-install script would
+  trigger the process again.
+- Fixed an issue where a task may be hashed with the incorrect Node.js version.
+- Fixed an issue when running Node.js tasks and the toolchain has not been configured.
+- Fixed a typo when installing npm dependencies: `node install` -> `npm install`
+
 #### 0.23.1
 
 #### 🐞 Fixes
