@@ -1,8 +1,6 @@
 use crate::platform::GoArch;
 use crate::GoLanguage;
-use proto_core::{
-    async_trait, Downloadable, ProtoError, Resolvable,
-};
+use proto_core::{async_trait, Downloadable, ProtoError, Resolvable};
 use std::env::consts;
 use std::path::PathBuf;
 
