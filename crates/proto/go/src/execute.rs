@@ -2,12 +2,6 @@ use crate::GoLanguage;
 use proto_core::{async_trait, Describable, Executable, Installable, ProtoError};
 use std::path::Path;
 
-#[cfg(target_os = "windows")]
-pub fn get_bin_name<T: AsRef<str>>(name: T) -> String {
-    format!("{}.{}", name.as_ref(), "exe")
-}
-
-#[cfg(not(target_os = "windows"))]
 pub fn get_bin_name<T: AsRef<str>>(name: T) -> String {
     format!("go/bin/{}", name.as_ref())
 }
